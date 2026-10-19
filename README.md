@@ -8,7 +8,7 @@
 
   <p>
     <a href="https://github.com/elskyx/Skyc"><img src="https://img.shields.io/badge/App_Repo-elskyx%2FSkyc-D97757?style=flat-square&logo=github" alt="Skyc Repository" /></a>
-    <a href="https://github.com/elskyx/Skyc/releases/tag/v2.0.1"><img src="https://img.shields.io/badge/Release-v2.0.1-2E5B88?style=flat-square" alt="Release v2.0.1" /></a>
+    <a href="https://github.com/elskyx/Skyc/releases/tag/v1.6.7"><img src="https://img.shields.io/badge/Release-v1.6.7-2E5B88?style=flat-square" alt="Release v1.6.7" /></a>
     <a href="https://www.npmjs.com/package/@elskyx/skyc"><img src="https://img.shields.io/npm/v/@elskyx/skyc?style=flat-square&color=cb3837" alt="npm package" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-green?style=flat-square" alt="License" /></a>
   </p>
@@ -37,13 +37,13 @@ This repository (`elskyx/About-Skyc`) hosts the official introducing landing web
 
 ---
 
-## 📦 Quick Downloads (v2.0.1)
+## 📦 Quick Downloads (v1.6.7)
 
 | Platform | Format | Direct Download |
 | :--- | :--- | :--- |
-| **Android** | APK (`arm64-v8a`, `v7a`, `x86_64`) | [Skyc-v2.0.1.apk](https://github.com/elskyx/Skyc/releases/download/v2.0.1/Skyc-v2.0.1.apk) |
-| **Windows Desktop** | 64-bit Installer (.exe) | [Skyc_2.0.1_x64-setup.exe](https://github.com/elskyx/Skyc/releases/download/v2.0.1/Skyc_2.0.1_x64-setup.exe) |
-| **Windows Desktop** | 64-bit Windows Installer (.msi) | [Skyc_2.0.1_x64.msi](https://github.com/elskyx/Skyc/releases/download/v2.0.1/Skyc_2.0.1_x64.msi) |
+| **Android** | APK (`arm64-v8a`, `v7a`, `x86_64`) | [Skyc-v1.6.7.apk](https://github.com/elskyx/Skyc/releases/download/v1.6.7/Skyc-v1.6.7.apk) |
+| **Windows Desktop** | 64-bit Installer (.exe) | [Skyc_1.6.7_x64-setup.exe](https://github.com/elskyx/Skyc/releases/download/v1.6.7/Skyc_1.6.7_x64-setup.exe) |
+| **Windows Desktop** | 64-bit Windows Installer (.msi) | [Skyc_1.6.7_x64.msi](https://github.com/elskyx/Skyc/releases/download/v1.6.7/Skyc_1.6.7_x64.msi) |
 | **CLI** | Global npm package | `npm install -g @elskyx/skyc` |
 
 ---
