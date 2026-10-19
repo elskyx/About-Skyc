@@ -1,0 +1,5 @@
+# robots.txt for Skyc Introducing (GitHub Pages)
+User-agent: *
+Allow: /
+
+Sitemap: https://elskyx.github.io/About-Skyc/sitemap.xml
