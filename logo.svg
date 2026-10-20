@@ -1,50 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <!-- Skyc Logo Concept 4: The Sky Capsule (Master App Icon) -->
+  <!-- Skyc Logo: Claude Warm Parchment + Google Gemini in Bottom-Left Corner -->
   <defs>
-    <!-- Background Gradient: Subtle Obsidian Sheen -->
-    <linearGradient id="bg-obsidian" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#232321" />
-      <stop offset="100%" stop-color="#141413" />
+    <!-- Background Gradient: Warm Editorial Parchment -->
+    <linearGradient id="bg-parchment" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAF9F5" />
+      <stop offset="100%" stop-color="#EDECE6" />
     </linearGradient>
 
-    <!-- Terracotta Vivid Gradient -->
-    <linearGradient id="terracotta-core" x1="72" y1="56" x2="184" y2="200" gradientUnits="userSpaceOnUse">
+    <!-- Terracotta Vivid Gradient for Claude Asterisk -->
+    <linearGradient id="terracotta-core" x1="48" y1="48" x2="208" y2="208" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#E28466" />
       <stop offset="100%" stop-color="#C55B39" />
     </linearGradient>
 
-    <!-- Subtle Radial Glow Behind Core (Anti-slop: 0.15 opacity max) -->
-    <radialGradient id="soft-glow" cx="128" cy="128" r="90" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#D97757" stop-opacity="0.18" />
+    <!-- Gemini Radiant Blue Gradient -->
+    <linearGradient id="gemini-blue" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="50%" stop-color="#1A73E8" />
+      <stop offset="100%" stop-color="#0D47A1" />
+    </linearGradient>
+
+    <!-- Subtle Radial Glow Behind Core -->
+    <radialGradient id="soft-terracotta-glow" cx="132" cy="116" r="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97757" stop-opacity="0.12" />
       <stop offset="100%" stop-color="#D97757" stop-opacity="0" />
     </radialGradient>
   </defs>
 
   <!-- Squircle Base Tile -->
-  <rect x="8" y="8" width="240" height="240" rx="58" fill="url(#bg-obsidian)" />
-  <rect x="8" y="8" width="240" height="240" rx="58" stroke="#333330" stroke-width="1.5" />
+  <rect x="10" y="10" width="236" height="236" rx="58" fill="url(#bg-parchment)" stroke="#D8D6CD" stroke-width="2" />
+  
+  <!-- Ambient Warm Glow -->
+  <circle cx="132" cy="116" r="85" fill="url(#soft-terracotta-glow)" />
 
-  <!-- Ambient Light Reflection -->
-  <circle cx="128" cy="128" r="90" fill="url(#soft-glow)" />
+  <!-- Primary Glyph: Claude Organic Radiating Asterisk (Shifted slightly for bottom-left balance) -->
+  <g transform="translate(56, 36) scale(0.62)">
+    <path fill="url(#terracotta-core)" d="m50.228 170.321 50.357-28.257.843-2.463-.843-1.361h-2.462l-8.426-.518-28.775-.778-24.952-1.037-24.175-1.296-6.092-1.297L0 125.796l.583-3.759 5.12-3.434 7.324.648 16.202 1.101 24.304 1.685 17.629 1.037 26.118 2.722h4.148l.583-1.685-1.426-1.037-1.101-1.037-25.147-17.045-27.22-18.017-14.258-10.37-7.713-5.25-3.888-4.925-1.685-10.758 7-7.713 9.397.649 2.398.648 9.527 7.323 20.35 15.75L94.817 91.9l3.889 3.24 1.555-1.102.195-.777-1.75-2.917-14.453-26.118-15.425-26.572-6.87-11.018-1.814-6.61c-.648-2.723-1.102-4.991-1.102-7.778l7.972-10.823L71.42 0 82.05 1.426l4.472 3.888 6.61 15.101 10.694 23.786 16.591 32.34 4.861 9.592 2.592 8.879.973 2.722h1.685v-1.556l1.36-18.211 2.528-22.36 2.463-28.776.843-8.1 4.018-9.722 7.971-5.25 6.222 2.981 5.12 7.324-.713 4.73-3.046 19.768-5.962 30.98-3.889 20.739h2.268l2.593-2.593 10.499-13.934 17.628-22.036 7.778-8.749 9.073-9.657 5.833-4.601h11.018l8.1 12.055-3.628 12.443-11.342 14.388-9.398 12.184-13.48 18.147-8.426 14.518.778 1.166 2.01-.194 30.46-6.481 16.462-2.982 19.637-3.37 8.88 4.148.971 4.213-3.5 8.62-20.998 5.184-24.628 4.926-36.682 8.685-.454.324.519.648 16.526 1.555 7.065.389h17.304l32.21 2.398 8.426 5.574 5.055 6.805-.843 5.184-12.962 6.611-17.498-4.148-40.83-9.721-14-3.5h-1.944v1.167l11.666 11.406 21.387 19.314 26.767 24.887 1.36 6.157-3.434 4.86-3.63-.518-23.526-17.693-9.073-7.972-20.545-17.304h-1.36v1.814l4.73 6.935 25.017 37.59 1.296 11.536-1.814 3.76-6.481 2.268-7.13-1.297-14.647-20.544-15.1-23.138-12.185-20.739-1.49.843-7.194 77.448-3.37Z" />
+  </g>
 
-  <!-- Primary Glyph: The S-Collector Arc -->
-  <path d="M 172 78 
-           C 166 60 148 48 126 48 
-           C 92 48 68 74 68 108 
-           C 68 156 188 136 188 184 
-           C 188 214 162 232 128 232 
-           C 98 232 76 216 70 196" 
-        stroke="url(#terracotta-core)" 
-        stroke-width="24" 
-        stroke-linecap="round" />
-
-  <!-- Center Vault Inset Arrow / Catch Node -->
-  <path d="M 128 106 L 128 142 M 116 130 L 128 142 L 140 130" 
-        stroke="#F4F3EE" 
-        stroke-width="8" 
-        stroke-linecap="round" 
-        stroke-linejoin="round" />
-
-  <!-- Corner Precision Accent -->
-  <circle cx="186" cy="74" r="5" fill="#F4F3EE" opacity="0.9" />
+  <!-- Secondary Glyph: Google Gemini 4-Pointed Star in Bottom-Left Corner -->
+  <g transform="translate(48, 184) scale(2.6) translate(-12, -12)">
+    <!-- Soft Aura Glow -->
+    <circle cx="12" cy="12" r="14" fill="#E8EEF9" opacity="0.85" />
+    <!-- Gemini Curved Astroid Sparkle -->
+    <path fill="url(#gemini-blue)" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81" />
+    <!-- Core White Sparkle Center -->
+    <circle cx="12" cy="12" r="1.4" fill="#FFFFFF" />
+  </g>
 </svg>
