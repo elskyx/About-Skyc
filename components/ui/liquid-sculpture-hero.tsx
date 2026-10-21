@@ -1103,41 +1103,42 @@ export interface SculptureHeroProps {
   height?: string
   /** Giant faint word behind the sculpture. Empty to hide. */
   backdropText?: string
+  /** "stacked" = headline di bawah patung (bawaan). "split" = headline kiri, patung kanan (≥1024px). */
+  layoutMode?: "stacked" | "split"
+  /** Position of the headline on desktop: "center" (default stacked) or "left" (split 2-column layout). */
+  headlinePosition?: "center" | "left"
+  /** Slot di bawah CTA bawaan. Dipakai untuk paragraf/tombol/pill npx milik Skyc. */
+  children?: React.ReactNode
   showCredit?: boolean
   className?: string
   style?: React.CSSProperties
 }
 
 const DEFAULTS = {
-  src: "https://cdn.21st.dev/assets/mirror/ae/ae8c3de9003460e59182e950ccd345f68f27f9d0e4808b64c92c962a4eca7120.webp",
-  darkSrc: "https://cdn.21st.dev/assets/mirror/a1/a1fa387b6e417b26a25f317559c87cce4d241c1052c52a2b3bc2966b2aaf9b65.webp",
-  mobileSrc: "https://cdn.21st.dev/assets/mirror/b0/b0c8d8e5d64b8cec906a3b390e3dc7c9a5af08334bf0632873c601782cb4bc46.webp",
-  mobileDarkSrc: "https://cdn.21st.dev/assets/mirror/9a/9a82cb59be1bfde59855b79d7a565e487155a89f4d52eac74dcc10e267b2b6d1.webp",
-  imageAlt: "Abstract sculpture of interwoven metallic filaments and particles",
-  imageBackground: "#EAE9E7",
-  brand: "Forma®",
-  navLinks: [
-    { label: "Work", href: "#" },
-    { label: "Studio", href: "#" },
-    { label: "Approach", href: "#" },
-    { label: "Journal", href: "#" },
-  ],
-  navCta: { label: "Contact", href: "#" },
-  eyebrow: "Independent studio — Est. 2019",
-  headline: "Form that\nanswers back.",
-  headlineAccent: "answers back.",
-  body: "We shape products, identities and spaces with the precision of engineering and the patience of craft — work that holds up under attention.",
-  primaryCta: { label: "Start a project", href: "#" },
-  secondaryCta: { label: "Selected work", href: "#" },
-  hint: "Move across the form",
-  hintTouch: "Touch the form",
-  background: "#EBE9E5",
-  darkBackground: "#111110",
-  textColor: "#151514",
-  accentColor: "#151514",
-  headingFont: "'Geist', 'Helvetica Neue', Arial, sans-serif",
-  accentFont: "'Instrument Serif', 'Times New Roman', serif",
-  bodyFont: "'Geist', 'Helvetica Neue', Arial, sans-serif",
+  src: "./favicon.png",
+  darkSrc: "./favicon.png",
+  mobileSrc: "./favicon.png",
+  mobileDarkSrc: "./favicon.png",
+  imageAlt: "Skyc — universal media downloader",
+  imageBackground: "transparent",
+  brand: "Skyc®",
+  navLinks: [] as SculptureHeroLink[],
+  navCta: { label: "", href: "" },
+  eyebrow: "Zero-Cloud Architecture • 100% Free & Open Source",
+  headline: "Save anything,\nfrom anywhere.",
+  headlineAccent: "from anywhere.",
+  body: "Universal, zero-cloud media downloader for Android, Windows Desktop & CLI. 16+ platforms, pristine multi-stream extraction, zero tracking.",
+  primaryCta: { label: "", href: "" },
+  secondaryCta: { label: "", href: "" },
+  hint: "",
+  hintTouch: "",
+  background: "#FAF9F5",
+  darkBackground: "#141413",
+  textColor: "#141413",
+  accentColor: "#D97757",
+  headingFont: "var(--font-serif, 'Instrument Serif', Georgia, serif)",
+  accentFont: "var(--font-serif, 'Instrument Serif', Georgia, serif)",
+  bodyFont: "var(--font-sans, 'Plus Jakarta Sans', sans-serif)",
 }
 
 /* ────────────────────────────────────────────────────────────────────
@@ -1253,8 +1254,22 @@ const CSS = `
   .sh-ctas{gap:18px}
   .sh-btn{height:48px}
   .sh-content{padding-bottom:40px}
-  .sh-credit{right:auto;left:50%;transform:translateX(-50%)}
+.sh-extra{margin-top:clamp(20px,2.2cqw,28px)}
+@container (min-width:1024px){
+  .sh-split .sh-spacer{display:none}
+  .sh-split .sh-content{flex:1 1 auto;grid-template-columns:minmax(0,1fr);align-content:center;width:min(50%,700px);text-align:left}
+  .sh-split .sh-aside{justify-self:start;max-width:560px;padding-bottom:0;margin-top:clamp(20px,2.4cqw,32px);text-align:left}
+  .sh-split .sh-h1{font-size:clamp(40px,min(5.6cqw,10cqh),104px);text-align:left}
+  .sh-headline-left .sh-h1{text-align:left}
+  .sh-headline-left .sh-eyebrow{justify-content:flex-start}
 }
+@container (max-width:1023px){
+  .sh-split .sh-h1{text-align:left}
+  .sh-headline-left .sh-h1{text-align:left}
+}
+.skyc-hero .sh-eyebrow{width:fit-content;padding:8px 18px;gap:10px;border:1px solid rgba(255,255,255,0.08);border-radius:999px;background:rgba(255,255,255,0.02);font-size:14px;letter-spacing:0;text-transform:none;opacity:1}
+.skyc-hero .sh-eyebrow::before{width:8px;height:8px;border-radius:50%;background:#2fbf71;opacity:1}
+.skyc-hero .sh-h1{font-weight:400;letter-spacing:-0.04em}
 @media (prefers-reduced-motion:reduce){
   .sh-hint::before{animation:none}
   .sh-canvas,.sh-fallback,.sh-btn,.sh-btn svg,.sh-txt svg{transition:none}
@@ -1300,7 +1315,8 @@ function injectFonts() {
 }
 
 function renderHeadline(text: string, accent: string) {
-  const lines = text.split("\n")
+  const normalized = (text || "").replace(/\\n/g, "\n")
+  const lines = normalized.split("\n")
   return lines.map((line, li) => {
     let content: React.ReactNode = line
     const a = accent && accent.trim()
@@ -1374,8 +1390,11 @@ export default function SculptureHero(props: SculptureHeroProps) {
     speed = 1,
     intro = false,
     height = "100svh",
-    backdropText = "forma",
-    showCredit = true,
+    backdropText = "",
+    layoutMode = "stacked",
+    headlinePosition = "center",
+    children,
+    showCredit = false,
     className,
     style,
   } = props
@@ -1390,6 +1409,10 @@ export default function SculptureHero(props: SculptureHeroProps) {
   const engineRef = React.useRef<LiquidEngine | null>(null)
   const aspectRef = React.useRef(1983 / 793)
   const [isTouch, setIsTouch] = React.useState(false)
+
+  const isSplit = layoutMode === "split" || headlinePosition === "left"
+  const splitRef = React.useRef(false)
+  splitRef.current = isSplit
 
   const layout = React.useRef({ scale: sculptureScale, mobileScale: mobileSculptureScale, x: sculptureX, y: sculptureY })
   layout.current = {
@@ -1465,7 +1488,11 @@ export default function SculptureHero(props: SculptureHeroProps) {
     }
     // a portrait sculpture on phones dissolves into the top of the copy
     if (mob && aspectRef.current < 1.3 && content) band.bottom += content.offsetHeight * 0.3
-    const rect = computeRect(w, h, aspectRef.current, band, layout.current)
+    const split = splitRef.current && w >= 1024
+    if (split) band.bottom = h - 16 // patung boleh pakai tinggi penuh, headline ada di sampingnya
+    // di bawah 1024px split dimatikan, jadi offset X/Y ikut di-reset
+    const L = splitRef.current && w < 1024 ? { ...layout.current, x: 0, y: 0 } : layout.current
+    const rect = computeRect(w, h, aspectRef.current, band, L)
     const bd = backdropRef.current
     if (bd) {
       const chars = Math.max(1, (bd.textContent || "").length)
@@ -1648,7 +1675,16 @@ export default function SculptureHero(props: SculptureHeroProps) {
   const hintText = isTouch ? hintTouch : hint
 
   return (
-    <section ref={rootRef} className={"sh-root" + (className ? " " + className : "")} style={{ ...vars, ...style }}>
+    <section
+      ref={rootRef}
+      className={
+        "sh-root" +
+        (isSplit ? " sh-split" : "") +
+        (headlinePosition === "left" ? " sh-headline-left" : "") +
+        (className ? " " + className : "")
+      }
+      style={{ ...vars, ...style }}
+    >
       <style>{CSS}</style>
       {backdropText ? (
         <div ref={backdropRef} className="sh-backdrop" aria-hidden="true">
@@ -1725,6 +1761,7 @@ export default function SculptureHero(props: SculptureHeroProps) {
               </a>
             ) : null}
           </div>
+          {children ? <div className="sh-extra">{children}</div> : null}
         </div>
       </div>
 
