@@ -3,11 +3,11 @@
   <h1>About Skyc Downloader</h1>
   <p><strong>Official Introducing &amp; Interactive Showcase Website for Skyc Downloader</strong></p>
   <p>
-    <a href="https://elskyx.github.io/About-Skyc/"><strong>🌐 Live Website: elskyx.github.io/About-Skyc</strong></a>
+    <a href="https://elskyx.github.io/About-Skyc-Downloader/"><strong>🌐 Live Website: elskyx.github.io/About-Skyc-Downloader</strong></a>
   </p>
 
   <p>
-    <a href="https://github.com/elskyx/Skyc-Downloader-Downloader"><img src="https://img.shields.io/badge/App_Repo-elskyx%2FSkyc--Downloader-D97757?style=flat-square&logo=github" alt="Skyc Downloader Repository" /></a>
+    <a href="https://github.com/elskyx/Skyc-Downloader"><img src="https://img.shields.io/badge/App_Repo-elskyx%2FSkyc--Downloader-D97757?style=flat-square&logo=github" alt="Skyc Downloader Repository" /></a>
     <a href="https://github.com/elskyx/Skyc-Downloader/releases/tag/v1.6.7"><img src="https://img.shields.io/badge/Release-v1.6.7-2E5B88?style=flat-square" alt="Release v1.6.7" /></a>
     <a href="https://www.npmjs.com/package/@elskyx/skyc"><img src="https://img.shields.io/npm/v/@elskyx/skyc?style=flat-square&color=cb3837" alt="npm package" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0-green?style=flat-square" alt="License" /></a>
@@ -20,8 +20,8 @@
 
 **Skyc Downloader** is a universal, zero-cloud, client-side media downloader for Android, Windows Desktop, and CLI. It extracts watermark-free videos, high-resolution original photos, audio tracks, and carousels directly from 16+ platforms without routing personal data through remote intermediary servers.
 
-This repository (`elskyx/About-Skyc`) hosts the official introducing landing website deployed on **GitHub Pages**:
-👉 **[https://elskyx.github.io/About-Skyc/](https://elskyx.github.io/About-Skyc/)**
+This repository (`elskyx/About-Skyc-Downloader`) hosts the official introducing landing website deployed on **GitHub Pages**:
+👉 **[https://elskyx.github.io/About-Skyc-Downloader/](https://elskyx.github.io/About-Skyc-Downloader/)**
 
 ---
 
@@ -54,8 +54,8 @@ Run locally with any static web server:
 
 ```bash
 # Clone the repository
-git clone https://github.com/elskyx/About-Skyc.git
-cd About-Skyc
+git clone https://github.com/elskyx/About-Skyc-Downloader.git
+cd About-Skyc-Downloader
 
 # Preview via Python
 python -m http.server 3000
@@ -70,4 +70,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📄 License
 
-GPL-3.0 License &copy; 2026 [Skyc Project](https://github.com/elskyx/Skyc-Downloader) / [elskyx](https://github.com/elskyx). Inspired by Mori.
+GPL-3.0 License &copy; 2026 [Skyc Downloader](https://github.com/elskyx/Skyc-Downloader) / [elskyx](https://github.com/elskyx). Inspired by Mori.
