@@ -182,8 +182,8 @@ const HWF_CSS = `
 
 export default function HalftoneWordmarkFooter({
   wordmark = "skyc",
-  label = "Skyc Media Suite",
-  meta = "© 2026 Skyc · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)",
+  label = "Skyc Downloader",
+  meta = "© 2026 Skyc Downloader · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)",
   columns = DEFAULT_COLUMNS,
   backToTop = true,
   preset = "night",

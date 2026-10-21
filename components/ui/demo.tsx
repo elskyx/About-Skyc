@@ -72,8 +72,8 @@ export default function Demo() {
       <div className="w-full mt-auto">
         <HalftoneWordmarkFooter
           wordmark="skyc"
-          label="Skyc Media Suite"
-          meta="© 2026 Skyc · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)"
+          label="Skyc Downloader"
+          meta="© 2026 Skyc Downloader · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)"
         />
       </div>
     </div>
