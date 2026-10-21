@@ -37,7 +37,7 @@ export default function Demo() {
         headline={"Save anything,\nfrom anywhere."}
         headlineAccent="from anywhere."
         body="Universal, zero-cloud media downloader for Android, Windows Desktop & CLI. Pristine multi-stream extraction from 16+ platforms with zero tracking."
-        primaryCta={{ label: "Download Skyc", href: "#downloads" }}
+        primaryCta={{ label: "DOWNLOAD VIA APK AND EXE", href: "#downloads" }}
         secondaryCta={{ label: "Try Simulator", href: "#simulator" }}
         sculptureScale={0.9}
         sculptureX={20}
