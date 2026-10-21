@@ -73,7 +73,6 @@ export default function Demo() {
         <HalftoneWordmarkFooter
           wordmark="skyc"
           label="Skyc Downloader"
-          meta="© 2026 Skyc Downloader · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)"
         />
       </div>
     </div>

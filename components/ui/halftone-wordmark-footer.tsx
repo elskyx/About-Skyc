@@ -183,7 +183,7 @@ const HWF_CSS = `
 export default function HalftoneWordmarkFooter({
   wordmark = "skyc",
   label = "Skyc Downloader",
-  meta = "© 2026 Skyc Downloader · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)",
+  meta = "",
   columns = DEFAULT_COLUMNS,
   backToTop = true,
   preset = "night",
@@ -471,7 +471,7 @@ export default function HalftoneWordmarkFooter({
       <div className="hwf-top">
         <div className="hwf-brand">
           <strong>{label}</strong>
-          <span>{meta}</span>
+          {meta ? <span>{meta}</span> : null}
         </div>
         {columns.map((col) => (
           <nav className="hwf-col" key={col.title} aria-label={col.title}>
@@ -487,6 +487,9 @@ export default function HalftoneWordmarkFooter({
         ))}
       </div>
       <div className="hwf-rule">
+        <div className="hwf-copyright-bottom" style={{ fontSize: "0.78rem", opacity: 0.75 }}>
+          &copy; 2026 Skyc Project &bull; <strong style={{ color: "var(--hwf-warm, #D97757)", fontWeight: 600, display: "inline" }}>ELSKYX W/ ANTIGRAVITY</strong> &bull; Free &amp; Open Source (GPL-3.0)
+        </div>
         {backToTop ? (
           <button type="button" className="hwf-up" onClick={toTop}>
             Back to top ↑
