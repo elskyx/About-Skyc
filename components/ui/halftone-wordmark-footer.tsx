@@ -147,12 +147,13 @@ const HWF_CSS = `
 }
 .hwf-root canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; max-width: none; }
 .hwf-top {
-  position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 1fr));
+  position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.85fr) repeat(3, minmax(0, 1fr));
   gap: 24px; padding: clamp(22px, 3.4vw, 40px) clamp(20px, 3.4vw, 44px) 0;
   font-family: var(--hwf-mono); font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; line-height: 1.75;
 }
-.hwf-brand strong { display: block; font-weight: 500; }
-.hwf-brand span { opacity: .45; }
+.hwf-brand strong { display: inline; font-weight: 600; }
+.hwf-brand > strong { display: block; }
+.hwf-brand span { opacity: .75; }
 .hwf-col h3 { margin: 0; font: inherit; opacity: .4; font-weight: 500; }
 .hwf-col ul { list-style: none; margin: 0; padding: 0; }
 .hwf-col a, .hwf-up {
@@ -182,7 +183,7 @@ const HWF_CSS = `
 export default function HalftoneWordmarkFooter({
   wordmark = "skyc",
   label = "Skyc Media Suite",
-  meta = "© 2026 Skyc · Developed by elskyx & Antigravity · Free & Open Source (GPL-3.0)",
+  meta = "© 2026 Skyc · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)",
   columns = DEFAULT_COLUMNS,
   backToTop = true,
   preset = "night",

@@ -73,7 +73,7 @@ export default function Demo() {
         <HalftoneWordmarkFooter
           wordmark="skyc"
           label="Skyc Media Suite"
-          meta="© 2026 Skyc · Developed by elskyx & Antigravity · Free & Open Source (GPL-3.0)"
+          meta="© 2026 Skyc · ELSKYX W/ ANTIGRAVITY · Free & Open Source (GPL-3.0)"
         />
       </div>
     </div>
